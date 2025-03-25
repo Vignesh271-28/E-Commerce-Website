@@ -1,0 +1,220 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(223, 231, 221);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(227, 112, 12);
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    position: relative;
+}
+
+.logo label {
+    color: black;
+    font-size: 32px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.searchbar input {
+    background-color: white;
+    height: 24px;
+    width: 100%;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.searchbar button i {
+    padding: 5px;
+    color: black;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-bar i {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    background-color: #3d3838c3;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in;
+}
+
+.nav-bar ul li a:hover {
+    background-color: rgb(196, 175, 175);
+}
+
+/* Product Detail */
+.product-detail {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    width: 90%; /* Default to 90% width for responsiveness */
+    max-width: 600px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .searchbar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        /* gap: 10px; */
+        /* width: 100%; */
+        text-align: center;
+        background-color: whitesmoke;
+        padding: 10px;
+        position: absolute;
+        /* top: 100%; */
+        /* left: 285px;
+        top: 20px; */
+        top: -90px;
+        left:305px;
+        /* z-index: 1000; */
+    }
+
+    .nav-bar ul.menu-toggling {
+        display: flex; /* Show when toggled */
+    }
+
+    .nav-bar i {
+        display: block; 
+        z-index: 1;/* Show menu button */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo label {
+        font-size: 24px;
+    }
+
+    .searchbar input {
+        padding: 10px;
+    }
+
+    .product-detail {
+        width: 95%; /* Use more space on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo label {
+        font-size: 20px;
+    }
+
+    .nav-bar ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .product-detail h2 {
+        font-size: 20px;
+    }
+
+    .footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+
+
+#menu-btn {
+    /* display: block; */
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: -90px;
+    left:380px ;
+    margin: 8px;
+}
